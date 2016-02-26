@@ -1,0 +1,71 @@
+wangsnowyin@wangsnowyin-Aspire-V5-473G:~/Unix/lab/xueyin.lab5/ex1$ ./myshell 
+gosh> ls 
+c1 0: ls
+Running Command
+---------------
+gosh.h	makefile  myshell  redirect.sh	results.log  script  shell.c
+handler: Reaped child 3763 - 
+---------------
+Command Returned Exit Code 0
+
+gosh> VAR='hello man'
+c1 0: VAR='hello man'
+Running Command
+---------------
+define new variable: success
+---------------
+Command Returned Exit Code 0
+
+gosh> echo $VAR
+c1 0: echo
+c1 1: $VAR
+Running Command
+---------------
+hello man
+---------------
+Command Returned Exit Code 0
+
+gosh> ./redirect.sh > results.log 2>&1
+c1 0: ./redirect.sh
+c1 1: >
+c1 2: results.log
+c1 3: 2>&1
+Running Command
+---------------
+dup file handle: success
+handler: Reaped child 3976 - 
+---------------
+Command Returned Exit Code 0
+
+gosh> cat results.log
+c1 0: cat
+c1 1: results.log
+Running Command
+---------------
+this goes to stdout
+this goes to stderr
+handler: Reaped child 3977 - 
+---------------
+Command Returned Exit Code 0
+
+gosh> cd /usr/lib
+c1 0: cd
+c1 1: /usr/lib
+Running Command
+---------------
+change dir: success
+---------------
+Command Returned Exit Code 0
+
+gosh> pwd
+c1 0: pwd
+Running Command
+---------------
+/usr/lib
+---------------
+Command Returned Exit Code 0
+
+gosh> exit
+
+
+
